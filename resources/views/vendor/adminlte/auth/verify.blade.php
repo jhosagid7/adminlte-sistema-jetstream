@@ -4,7 +4,7 @@
 
 @section('auth_body')
 
-    @if(session('resent'))
+    @if (session('resent'))
         <div class="alert alert-success" role="alert">
             {{ __('adminlte::adminlte.verify_email_sent') }}
         </div>
@@ -13,11 +13,11 @@
     {{ __('adminlte::adminlte.verify_check_your_email') }}
     {{ __('adminlte::adminlte.verify_if_not_recieved') }},
 
-    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+    <form class="d-inline" method="POST" action="{{ route('verification.send') }}">
         @csrf
-        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">
+        <button type="submit" class="btn btn-primary mt-4">
             {{ __('adminlte::adminlte.verify_request_another') }}
-        </button>.
+        </button>
     </form>
 
 @stop
