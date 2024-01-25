@@ -25,4 +25,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get(
+        'notifications/get',
+        [App\Http\Controllers\NotificationsController::class, 'getNotificationsData']
+    )->name('notifications.get');
 });

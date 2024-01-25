@@ -63,7 +63,9 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function adminlte_image()
     {
-        return url($this->profile_photo_url);
+        // return url($this->profile_photo_url);
+        // return auth()->user()->profile_photo_url;
+        return asset('storage/' . $this->profile_photo_path);
     }
 
     public function adminlte_profile_url()
