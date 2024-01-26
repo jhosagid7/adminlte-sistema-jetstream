@@ -76,7 +76,7 @@ class NotificationsController extends Controller
         return [
             'label'       => count($notifications),
             'label_color' => 'danger',
-            'icon_color'  => 'dark',
+            'icon_color'  => 'warning',
             'dropdown'    => $dropdownHtml,
         ];
     }

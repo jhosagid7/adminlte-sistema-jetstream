@@ -1,4 +1,14 @@
-<x-app-layout>
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>{{ __('Profile') }}</h1>
+@stop
+
+@section('content')
+
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Profile') }}
@@ -42,4 +52,5 @@
             @endif
         </div>
     </div>
-</x-app-layout>
+
+@stop

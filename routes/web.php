@@ -30,3 +30,9 @@ Route::middleware([
         [App\Http\Controllers\NotificationsController::class, 'getNotificationsData']
     )->name('notifications.get');
 });
+
+
+
+Route::get('/home', function () {
+    return view('home');
+})->name('home')->middleware('auth');
