@@ -23,18 +23,18 @@
                                     reader.readAsDataURL($refs.photo.files[0]);
                             " />
 
-                    <x-label for="photo" value="{{ __('Photo') }}" />
+                    {{--  <x-label for="photo" value="{{ __('Photo') }}" />  --}}
 
                     <!-- Current Profile Photo -->
                     <div class="block mt-2 mb-3 container w-50" x-show="! photoPreview">
                         <img object-fit="cover" max-width="50" max-height="50"
                             src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}"
-                            class="block img-rounded img-thumbnail">
+                            class="block img-circle img-thumbnail">
                     </div>
 
                     <!-- New Profile Photo Preview -->
                     <div class="col-4 mt-2 mb-3 container w-50" x-show="photoPreview" style="display: none;">
-                        <img max-width="100%" alt="{{ $this->user->name }}" class="block img-rounded img-thumbnail"
+                        <img max-width="100%" alt="{{ $this->user->name }}" class="block img-circle img-thumbnail"
                             x-bind:src="photoPreview">
                     </div>
 
