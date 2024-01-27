@@ -27,9 +27,8 @@
 
                     <!-- Current Profile Photo -->
                     <div class="block mt-2 mb-3 container w-50" x-show="! photoPreview">
-                        <img object-fit="cover" max-width="50" max-height="50"
-                            src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}"
-                            class="block img-circle img-thumbnail">
+                        <img object-fit="cover" max-width="50" max-height="50" src="{{ $this->user->adminlte_image() }}"
+                            alt="{{ $this->user->name }}" class="block img-circle img-thumbnail">
                     </div>
 
                     <!-- New Profile Photo Preview -->
